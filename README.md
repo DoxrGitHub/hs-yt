@@ -35,7 +35,7 @@ This is a compromise of both: an alternative client with much less lag, while ke
 
 You can use the official demo link:
 
-https://hsyt.doxr.hackclub.app/
+https://barex.doxr.hackclub.app/
 
 ## To Host
 
