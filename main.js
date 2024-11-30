@@ -100,9 +100,11 @@ app.get("/view", (req, res) => {
     res.sendFile(__dirname + "/public/viewer.html")
 })
 
-app.listen(3000, async () => {
+let PORT = process.argv[2] || 8080
+
+app.listen(PORT, async () => {
     await getInstance();
-    console.log("HS-YT listening on PORT 3000.")
+    console.log("HS-YT listening on PORT " + PORT)
 });
 
 async function getInstance() {
