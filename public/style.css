@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+    background-color: #161618;
+    color: #FF79C6;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Ubuntu", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+#particles-js canvas {
+    display: block;
+    vertical-align: bottom;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+    transition: opacity .8s ease, transform 1.4s ease
+}
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -10;
+    top: 0;
+    left: 0
+}
+
+.maintitle {
+    font-family: "Ubuntu", serif;
+    font-weight: 700;
+    font-style: normal;
+
+    text-align: center;
+    font-size: 50px; 
+    margin-bottom: 0;
+}
+
+.maindesc {
+    font-family: "Ubuntu", serif;
+    font-weight: 500;
+    font-style: normal;
+
+    text-align: center;
+    font-size: 20px;   
+}
+
+.search-input {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-family: "Ubuntu", serif;
+    font-weight: 400;
+    font-style: normal;
+
+    width: 75%;
+    padding: 1%;
+
+    background-color: #282A36;
+    border-color: #50FA7B;
+    border-width: 0px;
+    border-bottom-width: 5px;
+    border-left-width: 5px;
+    border-style: solid;
+    border-radius: 2rem;
+
+    color: #F8F8F2;
+
+    transition: border-color 0.3s ease;
+}
+
+
+.search-input:hover {
+    border-color: #FFB86C;
+}
+
+/* removes the default focus outline - I don't like it */
+.search-input:focus {
+    outline: none;
+}
+
+/** VIDEO CONTAINER **/
+
+#videos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.video-cont {
+    background-color: #282A36;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-cont:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: 170px; /* fixed height for uniformity... this will work right !?!?!? */
+    object-fit: cover;
+    display: block;
+}
+
+.video-info {
+    padding: 15px;
+    font-family: "Ubuntu", serif;
+    color: #F8F8F2;
+}
+
+.video-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    color: #FF79C6;
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.video-author {
+    font-size: 14px;
+    font-weight: 500;
+    color: #50FA7B;
+    margin: 0 0 5px 0;
+}
+
+.video-views {
+    font-size: 12px;
+    font-weight: 400;
+    color: #FFB86C;
+    margin: 0;
+}
+
+.video-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 90%;
+
+    border-color: #606378;
+}
+
+.vidiframe {
+    aspect-ratio: 16 / 9;
+    width: 65vw;
+}
+
+.vidiframe {
+    margin: 30px auto;
+    margin-left: 30px;
+    margin-bottom: 0;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    border: 3px solid #44475A;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vidiframe:hover {
+    border: 3px solid #6272A4;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.dataContainer {
+    position: relative;
+    max-width: 64vw;
+    color: #F8F8F2;
+    text-align: left;
+}
+
+.dataContainer > h2 {
+    margin-left: 40px;
+    font-size: 100% !important;
+    white-space: nowrap;        /* Prevents text from wrapping */
+    overflow: hidden;           /* Hides the overflowed text */
+    text-overflow: ellipsis;    /* Adds ellipsis (…) for overflowed text */
+}
+
+
+.dataContainer > p {
+    margin-left: 40px;
+    font-size: 100% !important;
+}
+
+/** **/
+
+.video-view-container {
+    display: flex;
+    max-width: 100%;
+    gap: 20px;
+    padding: 20px;
+}
+
+#vidContainer {
+    flex: 2;
+}
+
+.hsyt-panel {
+    flex: 1;
+    background-color: #282A36;
+    border-radius: 15px;
+    padding: 20px;
+    color: #F8F8F2;
+}
+
+.panel-section {
+    margin-bottom: 20px;
+}
+
+.panel-section h3 {
+    color: #FF79C6;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #44475A;
+    padding-bottom: 10px;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.stat-label {
+    color: #50FA7B;
+    font-weight: 500;
+}
+
+.panel-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #44475A;
+    color: #F8F8F2;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.panel-btn svg {
+    margin-right: 10px;
+}
+
+.panel-btn:hover {
+    background-color: #6272A4;
+}
+
+
+
+/** MORE VIDEOS **/
+#more {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.more-video-item {
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+    background-color: #282A36;
+    border-radius: 10px;
+    padding: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.more-video-item:hover {
+    background-color: #44475A;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.more-video-thumbnail {
+    height: 25px; /* fixed height for uniformity... this will work right !?!?!? */
+    object-fit: cover;
+    display: block;
+}
+
+.more-video-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.more-video-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #FF79C6;
+    margin: 0;
+}
+
+.more-video-upload {
+    font-size: 12px;
+    color: #50FA7B;
+    margin: 5px 0 0;
+}
