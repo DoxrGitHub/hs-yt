@@ -1,6 +1,3 @@
-particlesJS.load('particles-js', 'particles.json', function() {
-    console.log('callback - particles.js config loaded');
-  });
 
 (async function() { // wrap everything within async; sorry for not using type="module" :3
     console.log("Hi, developer!");

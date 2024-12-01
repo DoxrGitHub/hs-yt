@@ -49,6 +49,7 @@ app.get("/feed", async (req, res) => {
 });
 
 app.get("/videoData", async (req, res) => {
+    try {
     const video = await youtube.getVideo(req.query.id);
 
     let nextArr = []
@@ -70,6 +71,18 @@ app.get("/videoData", async (req, res) => {
         commentData: null,
         relatedArray: nextArr
     })
+} catch {
+    res.json({
+        likes: "Error",
+        description: "Error",
+        views: "Error",
+        uploadDate: "Error",
+        title: "Error",
+        subs: "Error",
+        commentData: "Error",
+        relatedArray: "Error"
+    })
+}
 })
 
 app.get("/videoStream", async (req, res) => {
@@ -78,6 +91,7 @@ app.get("/videoStream", async (req, res) => {
 })
 
 app.get("/search", async (req, res) => {
+    try {
     let term = decodeURIComponent(req.query.term)
     const videos = await youtube.search(term, {
         type: "video",
@@ -94,6 +108,9 @@ app.get("/search", async (req, res) => {
     }
 
     res.send(itemsArr)
+} catch {
+    res.send([])
+}
 })
 
 app.get("/view", (req, res) => {

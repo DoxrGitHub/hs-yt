@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
+
+:root {
+    --bg: #1e1e2e;
+    --surface1: #45475a;
+    --text: #cdd6f4;
+    --subtext: #bac2de;
+    --overlay: #6c7086;
+}
 
 body {
-    background-color: #161618;
-    color: #FF79C6;
+    background-color: var(--bg);
+    color: #cba6f7;
     margin: 0;
     padding: 0;
 
@@ -14,7 +23,6 @@ body {
 
 #particles-js canvas {
     display: block;
-    vertical-align: bottom;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
@@ -33,13 +41,21 @@ body {
 }
 
 .maintitle {
-    font-family: "Ubuntu", serif;
-    font-weight: 700;
+    font-family: "Jaro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
     font-style: normal;
-
+    
     text-align: center;
-    font-size: 50px; 
-    margin-bottom: 0;
+    font-size: 75px;
+    
+    margin: 10px;
+}
+
+.loadr {
+    max-width: 15vw;
+    position: relative;
+    text-align: center;
 }
 
 .maindesc {
@@ -63,8 +79,8 @@ body {
     width: 75%;
     padding: 1%;
 
-    background-color: #282A36;
-    border-color: #50FA7B;
+    background-color: var(--overlay);
+    border-color: #a6e3a1;
     border-width: 0px;
     border-bottom-width: 5px;
     border-left-width: 5px;
@@ -76,9 +92,13 @@ body {
     transition: border-color 0.3s ease;
 }
 
+::placeholder {
+    color: #d0d0ca;
+    opacity: 1; /* Firefox */
+}
 
 .search-input:hover {
-    border-color: #FFB86C;
+    border-color: #f9e2af;
 }
 
 /* removes the default focus outline - I don't like it */
@@ -97,7 +117,7 @@ body {
 }
 
 .video-cont {
-    background-color: #282A36;
+    background-color: var(--surface1);
     border-radius: 15px;
     overflow: hidden;
     width: 300px;
@@ -120,14 +140,14 @@ body {
 .video-info {
     padding: 15px;
     font-family: "Ubuntu", serif;
-    color: #F8F8F2;
+    color: var(--subtext);
 }
 
 .video-title {
     font-size: 18px;
     font-weight: 700;
     margin: 0 0 10px 0;
-    color: #FF79C6;
+    color: var(--text);
     text-decoration: none;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -137,14 +157,14 @@ body {
 .video-author {
     font-size: 14px;
     font-weight: 500;
-    color: #50FA7B;
+    color: var(--subtext);
     margin: 0 0 5px 0;
 }
 
 .video-views {
     font-size: 12px;
     font-weight: 400;
-    color: #FFB86C;
+    color: var(--subtext);
     margin: 0;
 }
 
@@ -184,7 +204,7 @@ hr {
 .dataContainer {
     position: relative;
     max-width: 64vw;
-    color: #F8F8F2;
+    color: var(--text);
     text-align: left;
 }
 

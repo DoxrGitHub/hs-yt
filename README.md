@@ -28,6 +28,7 @@ This is a compromise of both: an alternative client with much less lag, while ke
 - Livestreaming works beautifully
 - Much less on-load lag than the main YouTube website
 - People hosting don't need to worry about data usage since YouTube embedding is used.
+- catppuccin :D
 
 <hr>
 
